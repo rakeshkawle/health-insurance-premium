@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Know Insurance Premium Amount</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7eac5;
+            color: #444;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #008080;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #008080;
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-row label,
+        .form-row select,
+        .form-row input[type="number"] {
+            width: calc(50% - 5px); /* Adjust the width as needed */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            color: #fff;
+            background-color: #008080;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #006666;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            color: #008080;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Total Annual Health Insurance Premium</h1>
+    <form action="/predict" method="POST">
+        <div class="form-row">
+            <label for="Age">Age:</label>
+            <input type="number" min="0" max="120" name="Age" id="Age" required>
+
+            <label for="Sex">Sex:</label>
+            <select name="Sex" id="Sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="Bmi">BMI:</label>
+            <input type="number" min="0" max="200" step="0.01" name="Bmi" id="Bmi" required>
+
+            <label for="Children">Number of Children:</label>
+            <input type="number" min="0" max="100" name="Children" id="Children" required>
+        </div>
+
+        <div class="form-row">
+            <label for="Smoker">Smoker:</label>
+            <select name="Smoker" id="Smoker" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="Region">Region:</label>
+            <select name="Region" id="Region" required>
+                <option value="northeast">Northeast</option>
+                <option value="southeast">Southeast</option>
+                <option value="southwest">Southwest</option>
+                <option value="northwest">Northwest</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Get Quote">
+    </form>
+
+</body>
+</html>

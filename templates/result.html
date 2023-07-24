@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Premium Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #a5f384;
+            color: #444;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #008080;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .result-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #d5f4e6; /* Green background color for the result */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            color: #008080;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insurance Premium Amount To Paid</h1>
+    <div class="result-container">
+        <p>Your Insurance Premium : {{ final_result }}</p>
+    </div>
+</body>
+</html>
