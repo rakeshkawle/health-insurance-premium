@@ -17,7 +17,7 @@ from src.logger import logging
 from src.exception import CustomException
 
 ## picke obje making functions
-from utils import save_obj
+from src.utils import save_obj
 
 
 ## Data Transformation config
@@ -36,7 +36,7 @@ class DataTransformation:
 
             # one hot encoding
             one_hot_tf=ColumnTransformer([
-                ('ohe_sex',OneHotEncoder(sparse=False,handle_unknown='ignore',drop='first'),[1,4,5])]
+                ('ohe_sex',OneHotEncoder(sparse_output=False,handle_unknown='ignore',drop='first'),[1,4,5])]
                 ,remainder='passthrough')
             
             # Scaling the data
@@ -79,8 +79,8 @@ class DataTransformation:
             target_feature_test_df = test_df[target_col]
 
             ## apply the transformation
-            input_feature_train_arr =self.preprocessor_obj.fit_transform(input_features_train_df)
-            input_feature_test_arr=self.preprocessor_obj.transform(input_features_test_df)
+            input_feature_train_arr = preprocessor_obj.fit_transform(input_features_train_df)
+            input_feature_test_arr = preprocessor_obj.transform(input_features_test_df)
 
             logging.info("Applying preprocessing object on training and testing datasets.")
 
@@ -88,7 +88,7 @@ class DataTransformation:
             test_arr = np.c_[input_feature_test_arr, np.array(target_feature_test_df)]
 
             save_obj(
-                file_path=self.data_transformation_config.processor_obj_file_path,
+                file_path=self.data_transformation_config.preprocessor_obj_file_path,
                 obj=preprocessor_obj
             )
 

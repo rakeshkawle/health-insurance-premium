@@ -26,6 +26,7 @@ class DataIngestion:
         try:
             ## just basically reading the data from path
             df=pd.read_csv(os.path.join('notebook/data','insurance.csv'))
+            logging.info('Dataset read as pandas Dataframe')
 
             ## ek direcory bannow & path ka nam     given below hoga 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path),exist_ok=True)
@@ -36,8 +37,8 @@ class DataIngestion:
             logging.info('Train data and Test data goinig to Split')
             train_data,test_data=train_test_split(df,test_size=0.3,random_state=42)
 
-            train_data.to_csv(self.ingestion_config.train_data_path)
-            test_data.to_csv(self.ingestion_config.test_data_path)
+            train_data.to_csv(self.ingestion_config.train_data_path,index=False,header=True)
+            test_data.to_csv(self.ingestion_config.test_data_path,index=False,header=True)
 
             logging.info('Data Ingestion Is completed')
             
@@ -47,3 +48,4 @@ class DataIngestion:
 
         except Exception as e:
             logging.info('Error Ocure In Ingestion Config')
+
