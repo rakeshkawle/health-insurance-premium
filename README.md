@@ -1,7 +1,5 @@
 # Machine Learning 
 ## Health Insurance Premium Prediction Project 
-# Machine Learning 
-## Health Insurance Premium Prediction Project 
 
 
 # Insurance-Premium-Prediction
