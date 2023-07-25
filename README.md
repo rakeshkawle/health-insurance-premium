@@ -1,6 +1,9 @@
 # End-to-End ML Pipeline Projects
+![images](https://github.com/rakeshkawle/health-insurance-premium/assets/118442444/a6f05d04-ff78-48f5-85df-e1f1488c663e)
+
 
 # Health Insurance Premium Prediction Project 
+
 The goal of this project to give people an estimate of how much they need based on their individual health situation. After that, customers can work with any health insurance carrier and its plans and perks whilwe keeping the projected cost from our study in mind. This can assist a person in concentrating on the health side of an insurance policy rather than the ineffective parts.
 
 
