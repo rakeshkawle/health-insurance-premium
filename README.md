@@ -15,6 +15,8 @@ The goal of this project to give people an estimate of how much they need based 
 - Setup
 - Project Pipeline
 
+![continuous-training](https://github.com/rakeshkawle/health-insurance-premium/assets/118442444/57657ca8-385f-4f63-b510-295cd08324e5)
+
 # Technologies 💙
 This project is created with below technologies/tools/resources:
  - Jupyter Notebook 
@@ -25,7 +27,7 @@ This project is created with below technologies/tools/resources:
  - GitHub Actions
  - Flask
 
- - Python: 3.7
+ - Python: 3.8
  - Machine Learning
  - Jupyter Notebook
  - HTML
