@@ -1,5 +1,6 @@
 # End-to-End ML Pipeline Projects
-![images](https://github.com/rakeshkawle/health-insurance-premium/assets/118442444/a6f05d04-ff78-48f5-85df-e1f1488c663e)
+
+![ento](https://github.com/rakeshkawle/health-insurance-premium/assets/118442444/e30e86f7-b5e3-40ef-9f76-aaeb518568b8)
 
 
 # Health Insurance Premium Prediction Project 
